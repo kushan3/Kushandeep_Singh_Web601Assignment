@@ -6,13 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generateinterface": "ng generate interface",
+    "generateclass": "ng generate class",
+    "generatecomponent": "ng generate component"
   },
   
-  "generateinterface": "ng generate interface",
-  "generateclass": "ng generate class",
-  "generatecomponent": "ng generate component",
-
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
