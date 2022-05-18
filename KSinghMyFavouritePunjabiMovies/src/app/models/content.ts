@@ -1,10 +1,10 @@
 export interface Content {
   id: number;
   title : string;
-  body: string;
+  director: string;
   author: number;
   imageLink?:string;
-  type?:string;
+  model?:string;
   hashtag?:string[];
 }
 
