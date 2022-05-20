@@ -3,7 +3,7 @@ export interface Content {
   title : string;
   director: string;
   author: number;
-  imageLink?:string;
+  imageLink:string;
   model?:string;
   hashtag?:string[];
 }
