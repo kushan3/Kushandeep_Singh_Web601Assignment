@@ -2,9 +2,9 @@ export interface Content {
   id: number;
   title : string;
   director: string;
-  author: number;
+  review: number;
   imageLink:string;
-  model?:string;
+  about?:string;
   hashtag?:string[];
 }
 
