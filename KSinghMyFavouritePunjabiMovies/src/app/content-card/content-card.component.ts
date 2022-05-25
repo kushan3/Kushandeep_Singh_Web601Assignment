@@ -8,10 +8,11 @@ import { Content } from '../models/content';
 })
 export class ContentCardComponent implements OnInit {
   @Input() contentItem?: Content;
-
   constructor() {
   }
+
   ngOnInit(): void {
   }
+
 
 }
