@@ -13,6 +13,8 @@ export class ContentCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  displayAuthorAndId(): void {
+    console.log(" My List Movie Title: ", this.contentItem?.title, ", My List Movie ID: ", this.contentItem?.id);
+  }
 
 }

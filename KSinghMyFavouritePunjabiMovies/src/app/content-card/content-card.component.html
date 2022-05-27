@@ -1,9 +1,10 @@
-<div>
-  <img src="{{contentItem?.imageLink}}">
-  <div>
-     <h1> Title : {{contentItem?.title}} </h1>
-     <h5>About : {{contentItem?.about}} </h5>
-    <h5>Tags : # {{contentItem?.hashtag}}</h5>
+ <div *ngIf="contentItem" >
+     <header> {{contentItem?.title}}</header>
+    <img *ngIf= contentItem.imageLink [src]= contentItem.imageLink (click)= displayAuthorAndId()>
+    <h5>About : {{contentItem?.about}} </h5>
+   <div class="hashtag" *ngIf= contentItem?.hashtag>
+         <span *ngFor="let hashtag of contentItem.hashtag">
+      #{{ hashtag }}
+    </span>
   </div>
-
-</div>
+ </div>
