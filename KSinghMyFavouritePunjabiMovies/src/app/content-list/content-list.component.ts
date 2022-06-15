@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from "../models/content";
+import {MoviesService} from "../services/movies.service";
 
 
 @Component({
@@ -11,12 +12,14 @@ import { Content } from "../models/content";
 export class ContentListComponent implements OnInit {
   title = 'KSinghMyFavouritePunjabiMovies';
    myList: Content[];
-  constructor() {
+   
+  constructor(private moviesService: MoviesService) {
 this.myList =[];
 
 }
   ngOnInit(): void {
-
+    this.moviesService.getContent().subscribe((contentArrayFromService: Content[]) => {
+      this.myList = contentArrayFromService;
+  })
   }
-
 }

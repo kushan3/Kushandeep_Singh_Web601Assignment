@@ -25,5 +25,4 @@ export class MoviesService {
     return of(MYLIST);
   }
 
-
 }
