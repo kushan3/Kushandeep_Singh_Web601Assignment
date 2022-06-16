@@ -9,11 +9,11 @@ import {MYLIST} from "../data/mock-content-db";
 export class MoviesService {
 
   constructor() { }
-  getContent(): Observable<Content[]> {
+    getContent(): Observable<Content[]> {
     return of(MYLIST);
   }
-  getOneContent(id: number): Observable<Content[]> {
-    return of(MYLIST);
+  getOneContent(id: number): Observable<Content> {
+    return of (MYLIST[id]);
   }
   addContent(newContent: Content): Observable<Content[]> {
     return of(MYLIST);

@@ -1,6 +1,7 @@
 import {Content} from "../models/content";
 
 export const MYLIST: Content[] = [{
+
   id: 0,
   title: "manje bistre",
   director: "baljit Singh",
