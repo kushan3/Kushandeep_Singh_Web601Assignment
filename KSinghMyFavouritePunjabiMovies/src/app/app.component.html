@@ -1,4 +1,7 @@
 <h1>one movie wih id</h1>
+<label for="id">Enter Id Number:</label><br>
+<input type="text" #value name="id" value = "2" ><br><br>
+<button (click)="getMovie(value.value)">Show</button>
 <app-content-card [contentItem]="oneitem">
 
 </app-content-card>
