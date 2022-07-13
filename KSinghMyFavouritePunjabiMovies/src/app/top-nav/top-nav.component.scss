@@ -1,37 +1,20 @@
-:host {
-    background-color: aquamarine;
-    border-bottom: 1px solid #000;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-  }
-  
-  ul {
+ul {
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(244, 194, 194);
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(16, 16, 16);
     text-align: center;
-    padding: 8px;
-  
-    li {
-      display: inline-block;
-  
-      a {
-        padding: 16px;
-        display: inline-block;
-  
-        &:hover,
-        &.active {
-          background-color: #444;
-          color: white;
-        }
-  
-      }
-    }
+    padding: 14px 16px;
+    text-decoration: none;
   }
   
-  .active {
-    color: green;
-  }
