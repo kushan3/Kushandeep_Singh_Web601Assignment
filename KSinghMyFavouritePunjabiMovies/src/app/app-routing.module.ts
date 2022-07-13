@@ -28,7 +28,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  // this hooks up our routes so they work
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
