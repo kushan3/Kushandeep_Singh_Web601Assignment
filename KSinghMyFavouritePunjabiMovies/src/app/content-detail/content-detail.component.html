@@ -1,0 +1,24 @@
+<div *ngIf="individualMyList">
+    <header class="title" appHighlightImportantData highlightabout="title" colour="cadetblue">
+      {{ individualMyList.title }}
+      <span class="director" appHighlightImportantData highlightabout="director" colour="dodgerblue">
+        director: <span>{{ individualMyList.director }}</span>
+      </span>
+    </header>
+    <p *ngIf="individualMyList">
+      {{ individualMyList.review }}
+    </p>
+    <div class="hashtag" *ngIf="individualMyList.hashtag">
+      <span appHighlightImportantData highlightabout="tag" *ngFor="let hashtag of individualMyList.hashtag">
+        #{{ hashtag }}
+      </span>
+      <!-- <span>{{ individualMyList.hashtag.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
+    </div>
+    
+    <div class="buttons-wrapper">
+      <a routerLink="/list">Back to list</a>
+      <a *ngIf="individualMyList.id > 0" [routerLink]="['/detail', individualMyList.id - 1]">
+        Previous player
+      </a>
+    </div>
+  </div>

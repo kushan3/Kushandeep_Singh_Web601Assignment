@@ -8,23 +8,9 @@ import { MoviesService } from './services/movies.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'KSinghMyFavouritePunjabiMovies';
-  oneitem?: Content;
-  @Input() contentItem?: Content;
+  title = 'My_list';
 
-  constructor(private moviesService: MoviesService) {
-  }
-  getMovie(id:any){
-    this.moviesService.getOneContent(id).subscribe((contentArrayFromService: Content) => {
-      this.oneitem = contentArrayFromService;
-  }) 
-  }
-  ngOnInit(): void {
-    this.moviesService.getOneContent(4).subscribe((contentArrayFromService: Content) => {
-      this.oneitem = contentArrayFromService;
-  })
-  }
+  constructor() { }
 }
-
 
 
