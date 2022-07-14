@@ -24,14 +24,14 @@ export class MoviesService {
     console.log("Now getting it from the server!");
     return this.http.get<Content>("/api/My_list/" + id);
   }
-  addContent(newContent: Content): Observable<Content[]> {
-    return of();
+  addContentItem(newContent: Content): Observable<Content> {
+    return this.http.post<Content>("/api/chess", newContent, this.httpOptions)
   }
   updateContent(contentItem: Content): Observable<any> {
     return this.http.put<any>("api/My_list", contentItem, this.httpOptions);
   }
   removeContent(id: number): Observable<Content[]> {
-    return of();
+    return of(MYLIST);
   }
 
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ContentListComponent } from './content-list/content-list.component';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: "list",
     component: ContentListComponent,
+  },
+  {
+    path: "addContent",
+    component: ChangeContentComponent
   },
 
 ];

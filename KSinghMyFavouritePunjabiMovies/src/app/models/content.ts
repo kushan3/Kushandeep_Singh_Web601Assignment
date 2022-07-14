@@ -1,9 +1,9 @@
 export interface Content {
-  id: number;
+  id?: number;
   title : string;
   director: string;
-  review: number;
-  imageLink:string;
+  review?: number;
+  imageLink?:string;
   about?:string;
   hashtag?:string[];
 }

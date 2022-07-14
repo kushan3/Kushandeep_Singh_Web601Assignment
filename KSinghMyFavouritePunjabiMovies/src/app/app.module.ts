@@ -10,6 +10,8 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ChangeContentComponent } from './change-content/change-content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentListComponent,
     ContentCardComponent,
     ContentDetailComponent,
-    TopNavComponent
+    TopNavComponent,
+    ChangeContentComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

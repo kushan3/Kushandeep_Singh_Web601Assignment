@@ -1,0 +1,27 @@
+<label>
+  ID (for updating):
+  <input type="number" [(ngModel)]="contentItem.id">
+</label>
+<label>
+  Title:
+  <input [(ngModel)]="contentItem.title">
+</label>
+<label>
+  Director:
+  <input [(ngModel)]="contentItem.director">
+</label>
+<label>
+  ImageLink:
+  <input [(ngModel)]="contentItem.imageLink">
+</label>
+<label>
+  About:
+  <textarea [(ngModel)]="contentItem.about"></textarea>
+</label>
+<label>
+  Hashtags:
+  <input [(ngModel)]="tempTags">
+</label>
+<button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+  Add new content
+</button>
