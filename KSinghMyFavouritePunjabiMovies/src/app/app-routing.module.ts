@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: "detail/:id",
-    component: ContentListComponent
+    component: ContentDetailComponent
   },
   {
     path: "search",
