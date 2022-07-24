@@ -1,27 +1,28 @@
-<label>
-  ID (for updating):
-  <input type="number" [(ngModel)]="contentItem.id">
-</label>
-<label>
-  Title:
-  <input [(ngModel)]="contentItem.title">
-</label>
-<label>
-  Director:
-  <input [(ngModel)]="contentItem.director">
-</label>
-<label>
-  ImageLink:
-  <input [(ngModel)]="contentItem.imageLink">
-</label>
-<label>
-  About:
-  <textarea [(ngModel)]="contentItem.about"></textarea>
-</label>
-<label>
-  Hashtags:
-  <input [(ngModel)]="tempTags">
-</label>
-<button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>ID (for updating)</mat-label>
+  <input matInput [(ngModel)]="contentItem.id">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Title</mat-label>
+  <input matInput placeholder="Magnus" [(ngModel)]="contentItem.title">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Director</mat-label>
+  <input matInput [(ngModel)]="contentItem.director">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Image Link</mat-label>
+  <input matInput [(ngModel)]="contentItem.imageLink">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>About</mat-label>
+  <input matInput [(ngModel)]="contentItem.about">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Hashtags</mat-label>
+  <input matInput [(ngModel)]="tempTags">
+</mat-form-field>
+<button mat-raised-button color="primary"
+  (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
   Add new content
 </button>
