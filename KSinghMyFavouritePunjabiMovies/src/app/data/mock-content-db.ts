@@ -3,7 +3,7 @@ import {Content} from "../models/content";
 export const MYLIST: Content[] = [{
 
   id: 0,
-  title: "manje bistre",
+  title: "Manje Bistre",
   director: "baljit Singh",
   review: 8,
   imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRravx6g-R6CVaAwJRg7V66hYH8HYMSOxVbNmEHQ1ReYo-4OTIYk-5ibzGyaG3h7Awk1iA&usqp=CAU",

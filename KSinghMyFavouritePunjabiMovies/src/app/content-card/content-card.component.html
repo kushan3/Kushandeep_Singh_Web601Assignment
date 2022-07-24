@@ -1,10 +1,18 @@
- <div *ngIf="contentItem" >
-     <header> {{contentItem?.title}}</header>
-    <img *ngIf= contentItem.imageLink [src]= contentItem.imageLink (click)= displayAuthorAndId()>
-    <h5>About : {{contentItem?.about}} </h5>
-   <div class="hashtag" *ngIf= contentItem?.hashtag>
-         <span *ngFor="let hashtag of contentItem.hashtag">
-      #{{ hashtag }}
-    </span>
-  </div>
- </div>
+<mat-card class="card">
+<div *ngIf="contentItem" >
+  <mat-card-header>
+     <mat-card-title> {{contentItem?.title}} </mat-card-title>
+  </mat-card-header>
+  <mat-card-title-group> 
+    <img *ngIf= contentItem.imageLink  mat-card-xl-image [src]= contentItem.imageLink (click)= displayAuthorAndId()>
+  </mat-card-title-group>
+ <mat-card-content>
+  <p>About : {{contentItem?.about}} </p>
+  <div class="hashtag" *ngIf= contentItem?.hashtag>
+    <span *ngFor="let hashtag of contentItem.hashtag">
+ #{{ hashtag }}
+</span>
+</div>
+ </mat-card-content>
+</div>
+</mat-card>
