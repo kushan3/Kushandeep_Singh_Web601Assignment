@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContentListComponent } from './content-list/content-list.component';
 import { ChangeContentComponent } from './change-content/change-content.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,12 @@ const routes: Routes = [
     path: "addContent",
     component: ChangeContentComponent
   },
+{
+  path: "detail/:id",
+  component: ContentDetailComponent
+},
+
+
 
 ];
 

@@ -1,10 +1,8 @@
- <div *ngIf="contentItem" >
-     <header> {{contentItem?.title}}</header>
-    <img *ngIf= contentItem.imageLink [src]= contentItem.imageLink (click)= displayAuthorAndId()>
-    <h5>About : {{contentItem?.about}} </h5>
-   <div class="hashtag" *ngIf= contentItem?.hashtag>
-         <span *ngFor="let hashtag of contentItem.hashtag">
-      #{{ hashtag }}
-    </span>
+<div *ngIf="contentItem" >
+  <header> {{contentItem.title}}</header>
+  <img *ngIf= contentItem.imageLink [src]= contentItem.imageLink (click)= displayAuthorAndId()>
+  <h5>About : {{contentItem.about}} </h5>
+  <a class="content-detail-button" [routerLink]="['/detail', contentItem.id]" routerLinkActive="active">
+    Content Details
+  </a>
   </div>
- </div>

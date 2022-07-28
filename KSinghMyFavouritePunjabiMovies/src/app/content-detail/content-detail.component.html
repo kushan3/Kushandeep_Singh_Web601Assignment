@@ -1,1 +1,13 @@
-<p>content-detail works!</p>
+<div *ngIf="contentItem" >
+    <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue"> {{contentItem.title}}
+        <span class="director" appHighlightImportantData highlightType="director" colour="dodgerblue">
+            Director: <span>{{contentItem.director}}</span>
+          </span>
+    </header>
+    <div class="image-wrapper">
+        <img *ngIf= contentItem.imageLink [src]= contentItem.imageLink>
+        <div class="about">
+          {{ contentItem.about }}
+        </div>
+      </div>
+    </div>
